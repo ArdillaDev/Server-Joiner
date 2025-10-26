@@ -1,1 +1,1 @@
-ETH Notifier Joiner
+ETH Joiner
