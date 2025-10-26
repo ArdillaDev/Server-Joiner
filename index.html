@@ -2,49 +2,18 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ETH Joiner</title>
-    <style>
-      body {
-        background-color: #0d0d0d;
-        color: white;
-        font-family: Arial, sans-serif;
-        text-align: center;
-        margin-top: 15%;
-      }
-      button {
-        background-color: #5865F2;
-        border: none;
-        padding: 12px 25px;
-        border-radius: 8px;
-        color: white;
-        font-size: 18px;
-        cursor: pointer;
-        transition: 0.2s;
-      }
-      button:hover {
-        background-color: #4752C4;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>ETH Joiner</h1>
-    <p>Click below to join the Roblox server</p>
-    <button id="join">Join Server</button>
-
     <script>
       const params = new URLSearchParams(window.location.search);
       const placeId = params.get("placeId");
       const jobId = params.get("gameInstanceId");
 
-      document.getElementById("join").addEventListener("click", () => {
-        if (placeId && jobId) {
-          const url = `roblox://placeId=${placeId}&gameInstanceId=${jobId}`;
-          window.location.href = url;
-        } else {
-          alert("Invalid join link!");
-        }
-      });
+      if (placeId && jobId) {
+        window.location.href = `roblox://placeId=${placeId}&gameInstanceId=${jobId}`;
+      } else {
+        document.write("Invalid join link!");
+      }
     </script>
-  </body>
+  </head>
+  <body></body>
 </html>
+
