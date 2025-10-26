@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <script>
-      const params = new URLSearchParams(window.location.search);
-      const placeId = params.get("placeId");
-      const jobId = params.get("gameInstanceId");
-
-      if (placeId && jobId) {
-        window.location.href = `roblox://placeId=${placeId}&gameInstanceId=${jobId}`;
-      } else {
-        document.write("Invalid join link!");
-      }
-    </script>
-  </head>
-  <body></body>
+<head>
+  <meta http-equiv="refresh" content="1">
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const placeId = urlParams.get("placeId");
+    const jobId = urlParams.get("gameInstanceId");
+    if (placeId && jobId) {
+      window.location.href = `roblox://placeId=${placeId}&gameInstanceId=${jobId}`;
+    } else {
+      document.write("<h3>Invalid join link</h3>");
+    }
+  </script>
+</head>
+<body style="background-color:black; color:white; font-family:sans-serif; text-align:center; margin-top:20%;">
+  <h2>ETH Joiner</h2>
+  <p>Connecting to Roblox...</p>
+</body>
 </html>
+
 
